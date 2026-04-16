@@ -1,0 +1,323 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    overflow: hidden;
+}
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+.sidebar {
+    background-color: #181818;
+    width: 340px;
+    border-radius: 1rem;
+    margin: 0.75rem;
+}
+.main-content {
+    background: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow-y: auto;
+    padding: 0 1.5rem;
+}
+.music-player {
+    background-color: #181818;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.6);
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.nav {
+    background-color: #121212;
+    color: #fff;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option {
+    line-height: 2.5rem;
+    opacity: 0.85;
+    padding: 0.5rem 0.75rem;
+    transition: opacity 0.2s;
+}
+.nav-option:hover {
+    opacity: 1;
+}
+.nav-option i {
+    font-size: 1.25rem;
+    margin-left: 1rem;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+.nav-option i:hover {
+    opacity: 1;
+}
+.library {
+    background-color: #181818;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+}
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib-option img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+.icons {
+    font-size: 1.5rem;
+    opacity: 1;
+}
+.icons i {
+    opacity: 0.85;
+    margin-right: 1rem;
+    transition: opacity 0.2s;
+}
+.icons i:hover {
+    opacity: 1;
+}
+.boxs {
+    background-color: #282828;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 1rem 1.25rem;
+}
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box-p2 {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.badge {
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+    color: #000;
+}
+.dark-badge {
+    background-color: black;
+    color: #fff;
+}
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 10;
+}
+.sticky-nav-icons {
+    margin-left: 0.75rem;
+}
+.sticky-nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.7rem;
+}
+.nav-item {
+    margin-left: 1rem;
+}
+@media (max-width: 1000px) {
+    .hide {
+        display: none;
+    }
+}
+.card {
+    background-color: #181818;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+   
+.album {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    background: none;
+}
+.album-img {
+    width: 3rem;
+    height: 3rem
+    border-radius: 0.5rem;
+}
+.album-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+.album-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+.player {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+}
+.control {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+}
+.control img {
+    height: 40px;
+    width: 40px;
+    opacity: 0.9;
+    margin-left: 1.2rem;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+.control img:hover {
+    opacity: 1;
+}
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.player-control-icon {
+    height: 32px;
+    width: 32px;
+    margin: 0 12px;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+.player-control-icon:nth-child(3) {
+    height: 48px;
+    width: 48px;
+    opacity: 1;
+}
+.player-control-icon:hover {
+    opacity: 1;
+}
+.playback-bar {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+.curr-time, .tot-time {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    width: 40px;
+    text-align: center;
+}
+.progress-bar {
+    flex: 1;
+    margin: 0 1rem;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #1db954 0%, #191414 100%);
+    appearance: none;
+    outline: none;
+}
+.progress-bar::-webkit-slider-runnable-track {
+    background: #535353;
+    height: 4px;
+    border-radius: 2px;
+}
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    background: #1db954;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #000;
+    margin-top: -6px;
+    border: 2px solid #fff;
+    transition: background 0.2s;
+}
+.progress-bar:focus::-webkit-slider-thumb {
+    background: #1ed760;
+}
+.progress-bar::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    background: #1db954;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: background 0.2s;
+}
+.progress-bar::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    background: #1db954;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: background 0.2s;
+}
+.progress-bar::-moz-range-track {
+    background: #535353;
+    height: 4px;
+    border-radius: 2px;
+}
+.progress-bar::-ms-fill-lower {
+    background: #535353;
+    border-radius: 2px;
+}
+.progress-bar::-ms-fill-upper {
+    background: #535353;
+    border-radius: 2px;
+}
+.progress-bar:focus {
+    outline: none;
+}
+@media (max-width: 600px) {
+    .footer {
+        height: 80px;
+        font-size: 0.9rem;
+    }
+    .progress-bar {
+        width: 50%;
+    }
+}
+
+
